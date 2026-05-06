@@ -34,7 +34,7 @@ document.querySelectorAll('.nav-link, .footer-links a').forEach(link => {
 const typedWords = [
     'CS Student',
     'Web Developer',
-    'ML Enthusiast',
+    'AI/ML Enthusiast',
     'Team Leader',
     'Problem Solver'
 ];
