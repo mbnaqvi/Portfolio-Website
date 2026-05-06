@@ -317,14 +317,13 @@ a { text-decoration: none; color: inherit; }
     flex-shrink: 0;
 }
 
-.avatar-photo img {
+.avatar-photo-bg {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
+    inset: 0;
+    background-image: url('profile.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 .avatar-ring::before {
