@@ -1,389 +1,595 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baqar Naqvi - Portfolio</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Muhammad Baqar Naqvi - Aspiring Software and Data Enthusiast. CS Student at Bahria University Karachi. Portfolio showcasing projects in web development and machine learning.">
+    <title>Muhammad Baqar Naqvi — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-code"></i> Baqar Naqvi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <span class="brand-bracket">&lt;</span>Baqar<span class="brand-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero-section d-flex align-items-center">
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Muhammad Baqar<br>Naqvi</h1>
+                <p class="hero-role">
+                    <span class="typed-prefix">I'm a </span>
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="cursor-blink">|</span>
+                </p>
+                <p class="hero-bio">Aspiring software and data enthusiast with experience in leadership, web development, and machine learning, focused on applying technical and problem-solving skills to real-world challenges.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i>
+                        View My Work
+                    </a>
+                    <a href="resume.pdf" class="btn btn-outline" download="Muhammad_Baqar_Naqvi_Resume.pdf" id="resumeDownload">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/mb-baqar-naqvi" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/mbnaqvi" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:muhammaddbaqar@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-ring">
+                    <div class="avatar-inner">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="ring-dot dot-1"></div>
+                    <div class="ring-dot dot-2"></div>
+                    <div class="ring-dot dot-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8" data-aos="fade-right">
-                    <h1 class="display-3 fw-bold text-white mb-3">Hi, I'm Baqar Naqvi</h1>
-                    <p class="lead text-white-50 mb-4">Computer Science Student | Team Leader | Developer</p>
-                    <p class="text-white-50 mb-4">Passionate about coding and creating innovative solutions. Currently pursuing BS in Computer Science at Bahria University Karachi.</p>
-                    <div>
-                        <a href="#portfolio" class="btn btn-primary btn-lg me-2"><i class="fas fa-briefcase"></i> View My Work</a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg"><i class="fas fa-envelope"></i> Contact Me</a>
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Background & Skills</h2>
+                <p class="section-sub">Get to know more about me, my education, and what I bring to the table.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <div class="card-header-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Bahria University, Karachi</h4>
+                                <p class="timeline-degree">BS Computer Science</p>
+                                <span class="timeline-date">2023 — 2027</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Adamjee Government Science College, Karachi</h4>
+                                <p class="timeline-degree">Pre-Engineering (Intermediate)</p>
+                                <span class="timeline-date">2020 — 2022</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Happy Home High School, Karachi</h4>
+                                <p class="timeline-degree">Matriculation</p>
+                                <span class="timeline-date">2018 — 2020</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center" data-aos="fade-left">
-                    <div class="hero-icon">
-                        <i class="fas fa-user-graduate fa-10x text-white opacity-75"></i>
+
+                <div class="about-card reveal">
+                    <div class="card-header-icon">
+                        <i class="fas fa-code"></i>
+                        <h3>Technical Skills</h3>
+                    </div>
+                    <div class="skills-groups">
+                        <div class="skill-group">
+                            <h5>Programming & DSA</h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">DSA</span>
+                                <span class="skill-tag">OOP</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h5>Web Development</h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Next.js</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Express.js</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h5>Data & ML</h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Pandas</span>
+                                <span class="skill-tag">NumPy</span>
+                                <span class="skill-tag">Scikit-learn</span>
+                                <span class="skill-tag">Streamlit</span>
+                                <span class="skill-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h5>Database & Tools</h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">VS Code</span>
+                                <span class="skill-tag">Postman</span>
+                                <span class="skill-tag">Ubuntu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card reveal">
+                    <div class="card-header-icon">
+                        <i class="fas fa-globe"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="lang-list">
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span class="lang-name">English</span>
+                                <span class="lang-level">Advanced (C1)</span>
+                            </div>
+                            <p class="lang-desc">Professional working proficiency</p>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span class="lang-name">Urdu</span>
+                                <span class="lang-level">Fluent (C2)</span>
+                            </div>
+                            <p class="lang-desc">Native, Bilingual proficiency</p>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span class="lang-name">German</span>
+                                <span class="lang-level">Beginner (A1)</span>
+                            </div>
+                            <p class="lang-desc">Elementary proficiency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card reveal">
+                    <div class="card-header-icon">
+                        <i class="fas fa-star"></i>
+                        <h3>Professional Skills</h3>
+                    </div>
+                    <div class="pro-skills">
+                        <div class="pro-skill-item">
+                            <i class="fas fa-users"></i>
+                            <span>Team Leadership</span>
+                        </div>
+                        <div class="pro-skill-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Client Relationship Management</span>
+                        </div>
+                        <div class="pro-skill-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Written & Oral Communication</span>
+                        </div>
+                        <div class="pro-skill-item">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Marketing & PR</span>
+                        </div>
+                        <div class="pro-skill-item">
+                            <i class="fas fa-globe-asia"></i>
+                            <span>Cross-cultural Coordination</span>
+                        </div>
+                        <div class="pro-skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Front-end Development</span>
+                        </div>
+                        <div class="pro-skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Back-end Development</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-5">
+    <section id="experience" class="section section-alt">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center" data-aos="fade-up">
-                    <h2 class="display-4 fw-bold mb-3">About Me</h2>
-                    <p class="lead text-muted">Get to know more about my background and skills</p>
-                </div>
+            <div class="section-header">
+                <span class="section-tag">Professional Journey</span>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-sub">Roles I've held and what I accomplished along the way.</p>
             </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body p-4">
-                            <h3 class="card-title mb-4"><i class="fas fa-user text-primary"></i> Bio</h3>
-                            <p class="card-text">I am a dedicated Computer Science student at Bahria University Karachi Campus with a passion for technology and innovation. My objective is to work in an environment which encourages me to succeed and grow professionally where I can enhance and utilize my skills, capabilities and knowledge appropriately.</p>
-                            
-                            <h5 class="mt-4 mb-3"><i class="fas fa-graduation-cap text-primary"></i> Education</h5>
-                            <div class="mb-3">
-                                <h6 class="mb-1">Bahria University Karachi Campus</h6>
-                                <p class="text-muted mb-1">Bachelor of Science in Computer Science</p>
-                                <p class="text-muted"><small>2023 - Present</small></p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="mb-1">Adamjee Government Science College</h6>
-                                <p class="text-muted mb-1">Intermediate (76.9%)</p>
-                                <p class="text-muted"><small>2022</small></p>
-                            </div>
+
+            <div class="exp-timeline">
+                <div class="exp-item reveal">
+                    <div class="exp-marker">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-header">
                             <div>
-                                <h6 class="mb-1">Happy Home High School</h6>
-                                <p class="text-muted mb-1">Matric (91.7%)</p>
-                                <p class="text-muted"><small>2020</small></p>
+                                <h3 class="exp-role">Member — Membership Experience</h3>
+                                <p class="exp-org"><i class="fas fa-building"></i> AIESEC, Karachi</p>
                             </div>
+                            <span class="exp-date">Apr 2024 — Aug 2024</span>
                         </div>
+                        <ul class="exp-points">
+                            <li>Focused on enhancing member journeys through onboarding support and engagement activities.</li>
+                            <li>Organized team activities and ensured members stayed motivated and aligned with the organization's values and goals.</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body p-4">
-                            <h3 class="card-title mb-4"><i class="fas fa-cogs text-primary"></i> Skills</h3>
-                            
-                            <div class="mb-3">
-                                <h6>Programming Languages</h6>
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge bg-primary"><i class="fab fa-html5"></i> HTML</span>
-                                    <span class="badge bg-primary"><i class="fab fa-css3-alt"></i> CSS</span>
-                                    <span class="badge bg-primary"><i class="fab fa-js"></i> JavaScript</span>
-                                    <span class="badge bg-primary"><i class="fab fa-python"></i> Python</span>
-                                    <span class="badge bg-primary"><i class="fab fa-java"></i> Java</span>
-                                    <span class="badge bg-primary"><i class="fas fa-code"></i> C</span>
-                                    <span class="badge bg-primary"><i class="fas fa-code"></i> C++</span>
-                                    <span class="badge bg-primary"><i class="fas fa-database"></i> SQL</span>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <h6>Professional Skills</h6>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Written and Oral Communication</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Team Leadership</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Client Relationship Management</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Marketing & PR</li>
-                                </ul>
-                            </div>
-                            
+
+                <div class="exp-item reveal">
+                    <div class="exp-marker">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-header">
                             <div>
-                                <h6>Languages</h6>
-                                <div class="d-flex gap-3">
-                                    <span class="badge bg-secondary"><i class="fas fa-language"></i> English</span>
-                                    <span class="badge bg-secondary"><i class="fas fa-language"></i> Urdu</span>
-                                </div>
+                                <h3 class="exp-role">International Relations Manager — Outgoing Global Talent</h3>
+                                <p class="exp-org"><i class="fas fa-building"></i> AIESEC, Karachi</p>
                             </div>
+                            <span class="exp-date">Nov 2023 — Apr 2024</span>
                         </div>
+                        <ul class="exp-points">
+                            <li>Communicated and collaborated with international clients and partners.</li>
+                            <li>Managed cross-cultural coordination to support global opportunities.</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-            
-            <div class="row mt-4">
-                <div class="col-12" data-aos="zoom-in">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h3 class="card-title mb-4"><i class="fas fa-briefcase text-primary"></i> Experience</h3>
-                            <div class="border-start border-primary border-3 ps-4">
-                                <h5>Team Leader & IR Manager Outgoing Global Talent</h5>
-                                <h6 class="text-primary">AIESEC in Karachi</h6>
-                                <p class="text-muted"><i class="fas fa-calendar-alt"></i> January 2023 - August 2024</p>
-                                <p>During my Team Leader Outgoing Global Talent role, I effectively developed strong client relationships. I talked with international clients as the IR manager and collaborated with them. Working as a part of the Marketing and PR portfolio has helped me improve my pitching and content writing abilities.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mt-4">
-                <div class="col-12" data-aos="fade-up">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h3 class="card-title mb-4"><i class="fas fa-heart text-primary"></i> Interests</h3>
-                            <div class="row g-3">
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <i class="fas fa-football-ball fa-3x text-primary mb-2"></i>
-                                        <p class="mb-0">Football</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <i class="fas fa-baseball-ball fa-3x text-primary mb-2"></i>
-                                        <p class="mb-0">Cricket</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-2"></i>
-                                        <p class="mb-0">Teaching</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <i class="fas fa-plane fa-3x text-primary mb-2"></i>
-                                        <p class="mb-0">Travelling</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <i class="fas fa-hands-helping fa-3x text-primary mb-2"></i>
-                                        <p class="mb-0">Volunteering</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <i class="fas fa-laptop-code fa-3x text-primary mb-2"></i>
-                                        <p class="mb-0">Coding</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="portfolio" class="py-5 bg-light">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center" data-aos="fade-up">
-                    <h2 class="display-4 fw-bold mb-3">My Projects</h2>
-                    <p class="lead text-muted">Here are some of my recent works</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-6 col-md-6" data-aos="flip-left">
-                    <div class="card h-100 border-0 shadow-sm project-card">
-                        <div class="card-img-top bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="fas fa-university fa-5x text-white"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Bahria University Website</h5>
-                            <p class="card-text">A comprehensive university website showcasing academic programs, departments, and campus information with clean layout and navigation.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-info text-dark me-1">HTML</span>
-                                <span class="badge bg-info text-dark me-1">CSS</span>
-                                <span class="badge bg-info text-dark">Web Design</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="https://mbnaqvi.github.io/Bahria-University-website/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
+                <div class="exp-item reveal">
+                    <div class="exp-marker">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
                     </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-6" data-aos="flip-left" data-aos-delay="100">
-                    <div class="card h-100 border-0 shadow-sm project-card">
-                        <div class="card-img-top bg-success d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="fas fa-atom fa-5x text-white"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Interactive Periodic Table</h5>
-                            <p class="card-text">An interactive periodic table of elements built with HTML, displaying chemical elements with detailed information and user-friendly interface.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-info text-dark me-1">HTML</span>
-                                <span class="badge bg-info text-dark me-1">CSS</span>
-                                <span class="badge bg-info text-dark">Interactive</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="https://mbnaqvi.github.io/Periodic-Table-HTML/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-6" data-aos="flip-left" data-aos-delay="200">
-                    <div class="card h-100 border-0 shadow-sm project-card">
-                        <div class="card-img-top bg-warning d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="fas fa-file-alt fa-5x text-white"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Professional Resume Website</h5>
-                            <p class="card-text">A well-structured digital resume showcasing professional experience, education, and skills in an elegant web format.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-info text-dark me-1">HTML</span>
-                                <span class="badge bg-info text-dark me-1">CSS</span>
-                                <span class="badge bg-info text-dark">Portfolio</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="https://mbnaqvi.github.io/Resume/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-6" data-aos="flip-left" data-aos-delay="300">
-                    <div class="card h-100 border-0 shadow-sm project-card">
-                        <div class="card-img-top bg-danger d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="fas fa-table fa-5x text-white"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Table Web Layout</h5>
-                            <p class="card-text">A creative web layout using HTML tables to demonstrate structured data presentation and layout design techniques.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-info text-dark me-1">HTML</span>
-                                <span class="badge bg-info text-dark me-1">CSS</span>
-                                <span class="badge bg-info text-dark">Layout</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="https://mbnaqvi.github.io/Table-web-layout/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center" data-aos="fade-up">
-                    <h2 class="display-4 fw-bold mb-3">Get In Touch</h2>
-                    <p class="lead text-muted">Feel free to reach out for collaborations or just a friendly chat</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-6" data-aos="slide-right">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body p-4">
-                            <h4 class="card-title mb-4"><i class="fas fa-address-card text-primary"></i> Contact Information</h4>
-                            
-                            <div class="mb-3">
-                                <h6><i class="fas fa-map-marker-alt text-primary"></i> Address</h6>
-                                <p class="text-muted">R-150, Gul Houses Society, Gulistan-e-Johar, Block-7, Karachi</p>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <h6><i class="fas fa-phone text-primary"></i> Phone</h6>
-                                <p class="text-muted">03345432231</p>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <h6><i class="fas fa-envelope text-primary"></i> Email</h6>
-                                <p class="text-muted">bnaqvi305@gmail.com</p>
-                            </div>
-                            
+                    <div class="exp-card">
+                        <div class="exp-header">
                             <div>
-                                <h6 class="mb-3"><i class="fas fa-share-alt text-primary"></i> Social Media</h6>
-                                <div class="d-flex gap-3">
-                                    <a href="https://www.linkedin.com/in/baqar-naqvi-788a92262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn btn-outline-primary btn-lg"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://github.com/mbnaqvi" target="_blank" class="btn btn-outline-primary btn-lg"><i class="fab fa-github"></i></a>
-                                    <a href="https://www.facebook.com/share/1JyCt7bBgH/" target="_blank" class="btn btn-outline-primary btn-lg"><i class="fab fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/baqar.n?igsh=MWNjeXdkeDE3MTczZQ==" target="_blank" class="btn btn-outline-primary btn-lg"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                <h3 class="exp-role">Team Lead — Outgoing Global Talent</h3>
+                                <p class="exp-org"><i class="fas fa-building"></i> AIESEC, Karachi</p>
                             </div>
+                            <span class="exp-date">May 2023 — Nov 2023</span>
                         </div>
+                        <ul class="exp-points">
+                            <li>Developed and maintained strong client relationships, improving engagement and retention.</li>
+                            <li>Led and coordinated a team to manage outgoing talent processes.</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-lg-6" data-aos="slide-left">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body p-4">
-                            <h4 class="card-title mb-4"><i class="fas fa-paper-plane text-primary"></i> Send Me a Message</h4>
-                            <form id="contactForm" action="https://formspree.io/f/meorzqnp" method="POST">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-lg w-100">
-                                    <i class="fas fa-paper-plane"></i> Send Message
-                                </button>
-                            </form>
+
+                <div class="exp-item reveal">
+                    <div class="exp-marker">
+                        <div class="exp-dot"></div>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Content Manager — Marketing & PR</h3>
+                                <p class="exp-org"><i class="fas fa-building"></i> AIESEC, Karachi</p>
+                            </div>
+                            <span class="exp-date">Feb 2023 — May 2023</span>
                         </div>
+                        <ul class="exp-points">
+                            <li>Contributed to marketing campaigns and content creation.</li>
+                            <li>Strengthened pitching and communication skills through promotional activities.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-4">
+    <section id="projects" class="section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0">&copy; 2024 Baqar Naqvi. All rights reserved.</p>
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Projects</h2>
+                <p class="section-sub">A selection of things I've built — from full-stack apps to ML models.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-top">
+                        <div class="project-icon-wrap" style="--icon-color: #e85d04;">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mbnaqvi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Fruit Store — MERN App</h3>
+                    <p class="project-desc">A full-stack e-commerce app using React, Node.js, Express & MongoDB with user auth, cart, and checkout. Integrated payment APIs and deployed frontend on Vercel and backend on Render.</p>
+                    <div class="project-tags">
+                        <span>React.js</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                        <span>REST APIs</span>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Built with <i class="fas fa-heart text-danger"></i> using Bootstrap</p>
+
+                <div class="project-card reveal">
+                    <div class="project-top">
+                        <div class="project-icon-wrap" style="--icon-color: #7b2d8b;">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mbnaqvi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Cardiovascular Disease Prediction Model</h3>
+                    <p class="project-desc">Developed a machine learning model to predict disease outcomes. Performed data preprocessing and applied classification algorithms.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-top">
+                        <div class="project-icon-wrap" style="--icon-color: #0077b6;">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mbnaqvi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Movie Success Prediction App</h3>
+                    <p class="project-desc">Built an interactive app for real-time movie success prediction. Integrated user inputs with predictive modeling using Streamlit.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-top">
+                        <div class="project-icon-wrap" style="--icon-color: #06d6a0;">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mbnaqvi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Next.js Web Application</h3>
+                    <p class="project-desc">Developed a full web app using component-based architecture. Optimized performance and responsiveness across all screen sizes.</p>
+                    <div class="project-tags">
+                        <span>Next.js</span>
+                        <span>React</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-top">
+                        <div class="project-icon-wrap" style="--icon-color: #f72585;">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mbnaqvi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">KFC Website Clone</h3>
+                    <p class="project-desc">Recreated a commercial website layout to practice frontend skills. Implemented responsive design and interactive elements throughout.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-top">
+                        <div class="project-icon-wrap" style="--icon-color: #fb8500;">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://mbnaqvi.github.io/Bahria-University-website/" target="_blank" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/mbnaqvi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-desc">This portfolio website built with HTML, CSS, and JavaScript to showcase skills, projects, and experience in a clean, responsive layout.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact</h2>
+                <p class="section-sub">Feel free to reach out for collaborations, opportunities, or just a friendly chat.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:muhammaddbaqar@gmail.com" class="contact-value">muhammaddbaqar@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+923345432231" class="contact-value">+92 334-543-2231</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Gul Houses, Gulistan-e-Johar, Block 7, Karachi</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-at"></i></div>
+                            <div>
+                                <span class="contact-label">AIESEC</span>
+                                <a href="mailto:naqvi657@aiesec.net" class="contact-value">naqvi657@aiesec.net</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/mb-baqar-naqvi" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/mbnaqvi" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.facebook.com/share/1JyCt7bBgH/" target="_blank" class="social-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/baqar.n" target="_blank" class="social-btn">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap reveal">
+                    <form id="contactForm" action="https://formspree.io/f/meorzqnp" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                        <p class="form-status" id="formStatus"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-name">Muhammad Baqar Naqvi</p>
+                <p class="footer-copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div class="progress-bar" id="progressBar"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
