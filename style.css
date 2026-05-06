@@ -304,28 +304,27 @@ a { text-decoration: none; color: inherit; }
 }
 
 .avatar-inner {
-    width: 160px; height: 160px;
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
     border-radius: 50%;
     background: var(--card);
     border: 2px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 4rem;
-    color: var(--accent);
     position: relative;
     z-index: 1;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .avatar-photo img {
+    position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    object-position: center top;
     display: block;
-}
-
-.avatar-photo img[src=""], .avatar-photo img:not([src]) {
-    display: none;
 }
 
 .avatar-ring::before {
